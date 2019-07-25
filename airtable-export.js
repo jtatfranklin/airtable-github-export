@@ -56,7 +56,7 @@ var tasks = config.tables.map(function (tableName) {
           properties: record._rawJson.fields || {}
         }
         var geometry = parseGeometry(get(record, 'geometry'))
-        var coords = parseCoords([get(record, 'lon'), get(record, 'lat')])
+        var coords = parseCoords([get(record, 'longitude'), get(record, 'latitude')])
         if (geometry) {
           feature.geometry = geometry
           delete feature.properties.geometry
